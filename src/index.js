@@ -1,6 +1,6 @@
-// JS
 import './js/'
-import './js/jquery.min.js'
+// import './js/jquery.min.js'
+import './js/range.min.js'
 
 // SCSS
 import './assets/sass/main.sass'
