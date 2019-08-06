@@ -148,6 +148,7 @@
 			flex-basis: 27%
 
 .range
+	padding-bottom: 99px
 	&-title
 		width: 100%
 		margin: 30px auto 46px
@@ -235,4 +236,43 @@
 			width: 23px
 			cursor: pointer
 
-
+.about
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding: 30px 0 75px
+	&-title
+		margin: 0 auto 13px
+		text-align: center
+	&-text
+		max-width: 500px
+		margin: 0 auto 35px
+		text-align: center
+		color: $color-1
+		font-size: 16px
+		line-height: 24px
+	&-form
+		display: flex
+		flex-direction: column
+		width: 100%
+	&-input
+		min-height: 180px
+		padding: 20px 21px
+		margin: 0 auto 70px
+		font-weight: 400
+		font-family: $font-primary
+		text-align: left
+		font-size: 20px
+		&::placeholder
+			color: #c8c8c8
+			font-size: 20px
+			font-weight: 400
+	&-submit
+		width: 100%
+		max-width: 116px
+		height: 51px
+		margin: 0 auto
+		background: $color-2
+		border-radius: 10px
+		color: #ffffff
+		font-size: 16px
