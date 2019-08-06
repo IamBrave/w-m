@@ -35,7 +35,6 @@
 	width: 100%
 	max-width: 520px
 	height: 60px
-	margin-bottom: 25px
 	text-align: center
 	border: 1px solid #e5e5e5
 	background-color: transparent
@@ -65,6 +64,39 @@
 			border-bottom: 1.5px solid $color-2
 			transform: rotate(-45deg) translateY(-3px)
 
+.checkbox
+	&-label
+		position: relative
+		display: flex
+		align-items: center
+		padding-left: 32px
+		margin-bottom: 15px
+		color: $color-1-dark
+		font-size: 16px
+		font-weight: 300
+		transition: $trans-1
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			width: 20px
+			height: 20px
+			border: 1px solid $color-2
+			border-radius: 3px
+		&:after
+			content: ''
+			position: absolute
+			left: 5px
+			content: ''
+			width: 10px
+			height: 7px
+			border-left: 1.5px solid $color-2
+			border-bottom: 1.5px solid $color-2
+			transform: rotate(-45deg)
+	&-input
+		position: absolute
+		left: -9999px
+
 .intro
 	display: flex
 	justify-content: center
@@ -81,8 +113,33 @@
 	display: flex
 	align-items: center
 	flex-direction: column
-	padding: 28px 73px
+	padding: 28px 0 73px
 	text-align: center
 	&-title
 		margin-bottom: 47px
+	&-input, &-selectWrapper
+		margin-bottom: 25px
+		&:last-child
+			margin-bottom: 0
+
+.exp
+	display: flex
+	flex-direction: column
+	align-items: center
+	&-title
+		margin: 28px auto 51px
+	&-checkboxes
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		width: 100%
+		padding-right: 0
+	&-checkbox
+		flex-basis: 37%
+		&:nth-child(3n + 4), &:first-child
+			flex-basis: 36%
+		&:nth-child(3n + 3)
+			flex-basis: 27%
+
+
 
