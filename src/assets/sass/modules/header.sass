@@ -1,1 +1,19 @@
 // header style
+.header
+	width: 100%
+.menu
+	display: flex
+	align-items: center
+	justify-content: space-between
+	width: 100%
+	max-width: 500px
+	height: 80px
+	margin: 0 auto
+	&-link
+		&.active
+			a
+				color: $color-1
+		a
+			transition: $trans-1
+			font-size: 14px
+			color: $color-2

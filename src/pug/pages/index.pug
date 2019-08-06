@@ -8,8 +8,9 @@ block content
 	section.section.section_intro
 		img(src="/assets/img/bg.jpg", alt="background", class="section-image")
 		.container
-			h1.h1 Анкета
-	section.section
+			.intro
+				h1.h1.intro-title Анкета
+	section.section.section_form
 		.container
 			svg(class="section-icon", xmlns="http://www.w3.org/2000/svg", width="47", height="47", viewBox="0 0 47 47")
 				g
@@ -18,7 +19,8 @@ block content
 			.form
 				h2.h2.form-title Личная информация
 				input.input.form-input(type="text", placeholder="ФИО")
-				select.input.form-input.form-input_select(placeholder="Год рождения")
+				.input.input-selectWrapper Год рождения
+					select.input.input_select.form-input
 				input.input.form-input(type="text", placeholder="Место проживания")
 				input.input.form-input(type="text", placeholder="Skype")
 				input.input.form-input(type="email", placeholder="Email")
