@@ -17,3 +17,33 @@
 			transition: $trans-1
 			font-size: 14px
 			color: $color-2
+@media screen and (max-width: 768px)
+	.burger
+		display: flex
+		position: relative
+		top: 24px
+		left: 20px
+		height: 17px
+		transition: all 0.3s ease-in-out
+		&-line
+			position: absolute
+			background: #fff
+			transition: all 0.3s ease-in-out
+      &:nth-child(1)
+        top: 0px
+      &:nth-child(2) {
+          top: 6px;
+          margin: 0; }
+        .nav_mobile .burger-line:nth-child(3) {
+          top: 12px; }
+      .nav_mobile .burger.active {
+        position: relative; }
+        .nav_mobile .burger.active .burger-line {
+          position: absolute;
+          top: 6px; }
+          .nav_mobile .burger.active .burger-line:nth-child(1) {
+            transform: rotate(45deg); }
+          .nav_mobile .burger.active .burger-line:nth-child(2) {
+            opacity: 0; }
+          .nav_mobile .burger.active .burger-line:nth-child(3) {
+            transform: rotate(-45deg); }
