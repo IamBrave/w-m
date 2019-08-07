@@ -1,6 +1,8 @@
 .page
 	font-family: $font-primary
 	font-weight: $fw-main
+	&.blocked
+		overflow: hidden
 .page, html
 	overflow-x: hidden
 
@@ -135,6 +137,7 @@
 	padding-bottom: 120px
 	&-title
 		margin: 28px auto 51px
+		text-align: center
 	&-checkboxes
 		display: flex
 		justify-content: space-between

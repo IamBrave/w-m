@@ -1,0 +1,25 @@
+@media screen and (max-width: 576px)
+	.h2
+		line-height: 1.2
+	.exp-checkbox.checkbox-label
+		flex-basis: 100%
+	.exp
+		padding-bottom: 50px
+	.range
+		&-name
+			&_2, &_4
+				bottom: -60px
+				&:before
+					height: 17px
+					top: -35px
+					bottom: unset
+			&_4
+				max-width: 95px
+
+@media screen and (max-width: 350px)
+	.range
+		padding-bottom: 120px
+		&-name
+			&_2
+				max-width: 100px
+				transform: translateY(18px)

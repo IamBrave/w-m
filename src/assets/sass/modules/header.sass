@@ -18,32 +18,69 @@
 			font-size: 14px
 			color: $color-2
 @media screen and (max-width: 768px)
-	.burger
+	.page_index
+		padding-top: 30px
+	.header
+		position: fixed
 		display: flex
+		top: 0
+		height: 30px
+		background: #fff
+		z-index: 5
+		transition: $trans-1
+		&.active
+			height: 100vh
+			min-height: 100vh
+	.burger
 		position: relative
-		top: 24px
-		left: 20px
+		top: 8px
+		display: flex
+		flex-direction: column
+		width: 26px
 		height: 17px
-		transition: all 0.3s ease-in-out
+		left: 20px
+		transition: $trans-1
 		&-line
 			position: absolute
-			background: #fff
-			transition: all 0.3s ease-in-out
-      &:nth-child(1)
-        top: 0px
-      &:nth-child(2) {
-          top: 6px;
-          margin: 0; }
-        .nav_mobile .burger-line:nth-child(3) {
-          top: 12px; }
-      .nav_mobile .burger.active {
-        position: relative; }
-        .nav_mobile .burger.active .burger-line {
-          position: absolute;
-          top: 6px; }
-          .nav_mobile .burger.active .burger-line:nth-child(1) {
-            transform: rotate(45deg); }
-          .nav_mobile .burger.active .burger-line:nth-child(2) {
-            opacity: 0; }
-          .nav_mobile .burger.active .burger-line:nth-child(3) {
-            transform: rotate(-45deg); }
+			width: 26px
+			height: 3px
+			background: #000
+			transition: $trans-1
+			&:nth-child(1)
+				top: 0px
+			&:nth-child(2)
+				top: 6px
+				margin: 0
+			&:nth-child(3)
+				top: 12px
+		&.active
+			position: relative
+			.burger-line
+				position: absolute
+				top: 6px
+				&:nth-child(1)
+					transform: rotate(45deg)
+				&:nth-child(2)
+					opacity: 0
+				&:nth-child(3)
+					transform: rotate(-45deg)
+	.menu
+		position: absolute
+		display: none
+		transition: $trans-1
+		&.enter, &.exit
+			display: flex
+			opacity: 0
+			transform: translateX(-100%)
+		&.active
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			position: fixed
+			top: 30px
+			height: 100%
+			opacity: 1
+			transform: translateX(0)
+			.menu-link
+				margin-bottom: 20px
