@@ -41,6 +41,30 @@ for (let i = 0; i < checkboxes.length; i++) {
 }
 
 //select
-new Select
-    el: selectElement
-    className: '.input_select'
+var select = document.querySelector('.input_select');
+
+for (let i = 2019; i > 1900; i--) {
+	select.innerHTML += '<option value="' + i + '">' + i + '</option>';
+}
+
+$( document ).ready(function() {
+	$('.input_select').selectize();
+});
+
+//scroll
+ $(document).ready(function(){
+    $(".menu").on('click',"a", function (e) {
+				e.preventDefault();
+
+				$('.menu-link.active').removeClass('active');
+				$(this).closest('.menu-link').addClass('active');
+
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+				$('body,html').animate({scrollTop: top}, 500);
+
+				if ($('.menu').hasClass('active')) {
+					toggleMenu();
+				}
+    });
+});

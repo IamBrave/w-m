@@ -1,6 +1,7 @@
 .page
 	font-family: $font-primary
 	font-weight: $fw-main
+	padding-top: 80px
 .page, html
 	overflow-x: hidden
 	&.blocked
@@ -43,21 +44,28 @@
 	border: 1px solid #e5e5e5
 	background-color: transparent
 	border-radius: 5px
-	&::placeholder, &-selectWrapper
+	&::placeholder
 		color: $color-1-light
 		font-size: 24px
 		font-weight: 400
 	&_select
-		position: absolute
-		left: 0
-		width: 360px
-	&-selectWrapper
+		max-width: 320px
+		.selectize-dropdown-content
+			background: #fff
+		.option
+			height: 50px
+			background: #fff
+.selectize-input
 		position: relative
 		display: flex
 		justify-content: center
 		align-items: center
-		max-width: 320px
-		overflow: hidden
+		width: 100%
+		height: 100%
+		border: none
+		color: $color-1-light
+		font-size: 24px
+		font-weight: 400
 		&:after
 			content: ''
 			position: absolute
@@ -67,7 +75,11 @@
 			border-left: 1.5px solid $color-2
 			border-bottom: 1.5px solid $color-2
 			transform: rotate(-45deg) translateY(-3px)
-
+			transition: $trans-1
+		&.dropdown-active
+			&:after
+				border-bottom: 1.5px solid $color-2
+				transform: rotate(135deg) translateY(0)
 .checkbox
 	&-label
 		position: relative

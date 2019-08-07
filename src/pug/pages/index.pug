@@ -5,7 +5,7 @@ block variables
 	- var pageClass = 'page_index';
 
 block content
-	section.section.section_intro
+	section.section.section_intro#intro
 		img(src="/assets/img/bg.jpg", alt="background", class="section-image")
 		.container
 			.intro
@@ -19,12 +19,13 @@ block content
 			.form
 				h2.h2.form-title Личная информация
 				input.input.form-input(type="text", placeholder="ФИО")
-				.input.input-selectWrapper.form-selectWrapper Год рождения
-					select.input.input_select.form-input
+				//- .input.input-selectWrapper.form-selectWrapper Год рождения
+				select.input.input_select.form-input
+					option(value="Выберите год", selected) Выберите год
 				input.input.form-input(type="text", placeholder="Место проживания")
 				input.input.form-input(type="text", placeholder="Skype")
 				input.input.form-input(type="email", placeholder="Email")
-	section.section
+	section.section#exp
 		.container
 			svg(class="section-icon", xmlns="http://www.w3.org/2000/svg", width="47", height="47", viewBox="0 0 47 47")
 				g
@@ -51,7 +52,7 @@ block content
 						input.checkbox-input(type="checkbox")
 					label.exp-checkbox.checkbox-label Использую Git
 						input.checkbox-input(type="checkbox", checked)
-	section.section
+	section.section#js
 		.container
 			svg(class="section-icon", xmlns="http://www.w3.org/2000/svg", width="47", height="47", viewBox="0 0 47 47")
 				g
@@ -65,7 +66,7 @@ block content
 					.range-name.range-name_3 Использую готовые решения и умею их переделывать
 					.range-name.range-name_4 Пишу сложный JS с нуля
 					input.range-input(type="range", min="0", max="50", step="0.1")
-	section.section
+	section.section#about
 		.container
 			svg(class="section-icon", xmlns="http://www.w3.org/2000/svg", width="47", height="47", viewBox="0 0 47 47")
 				g
