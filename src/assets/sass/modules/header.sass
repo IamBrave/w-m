@@ -65,22 +65,18 @@
 				&:nth-child(3)
 					transform: rotate(-45deg)
 	.menu
-		position: absolute
+		position: fixed
 		display: none
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		height: calc(100vh - 30px)
+		top: 30px
+		left: 0
+		opacity: 0
 		transition: $trans-1
-		&.enter, &.exit
-			display: flex
-			opacity: 0
-			transform: translateX(-100%)
 		&.active
 			display: flex
-			flex-direction: column
-			align-items: center
-			justify-content: center
-			position: fixed
-			top: 30px
-			height: 100%
 			opacity: 1
-			transform: translateX(0)
-			.menu-link
-				margin-bottom: 20px
+		&-link
+			margin-bottom: 20px
